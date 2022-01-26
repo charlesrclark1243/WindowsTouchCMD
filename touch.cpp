@@ -15,10 +15,10 @@ int main(int argc, char* argv[]) {
         file.open(argv[1]);
 
         if (file.is_open()) {
-            cout << "File " << argv[1] << " created and opened successfully!" << endl;
+            cout << "File " << argv[1] << " created successfully!" << endl;
         }
         else {
-            cout << "Error - Could not open file " << argv[1] << "!" << endl;
+            cout << "Error - Could not create file " << argv[1] << "!" << endl;
         }
     }
 }
