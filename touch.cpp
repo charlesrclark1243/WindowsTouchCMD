@@ -5,10 +5,12 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     if (argc < 2) {
-        cout << "Error - Must enter a filename!" << endl;
+        cout << "Error: Must enter a filename!" << endl;
+        return -1;
     }
     else if (argc > 2) {
-        cout << "Error - Too many arguments passed!" << endl;
+        cout << "Error: Too many arguments passed!" << endl;
+        return -1;
     }
     else {
         ofstream file;
@@ -16,9 +18,11 @@ int main(int argc, char* argv[]) {
 
         if (file.is_open()) {
             cout << "File " << argv[1] << " created successfully!" << endl;
+            return 0;
         }
         else {
-            cout << "Error - Could not create file " << argv[1] << "!" << endl;
+            cout << "Error: Could not create file " << argv[1] << "!" << endl;
+            return -1;
         }
     }
 }
